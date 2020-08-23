@@ -2,7 +2,91 @@
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css);
 
+*{
+    margin: 0;
+    padding: 0;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+    animation: zoom 23s;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.banner{
+    position: absolute;
+    top: 30%;
+    right: 29%;
+   
+}
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
 
+.banner h1{
+    color: white;
+    font-size: 3.5rem;
+    font-family: "Baloo Da 2", serif;
+    font-weight: 200;
+    text-shadow: .3rem .4rem 2px rgba(0,0,0,.4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.97s forwards;
+}
+.banner p{
+    margin-bottom: 2rem;
+    color: white;
+    font-family: "Josefin Slab", serif;
+    font-size: 2rem;
+    text-shadow: .2rem .2rem 2px rgba(0,0,0,.4);
+    animation: moveBanner 1s 0.7s forwards;
+    opacity: 0;
+}
+.banner button{
+    font-family: "Muli", sarif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: white;
+    background: yellow;
+    padding:1rem 3rem ;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+}
+
+.banner button:hover{
+    background: purple;
+    transition: 1s;
+}
 
 
 
